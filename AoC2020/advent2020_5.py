@@ -1,24 +1,26 @@
-def find_row_number(ticket_start:str) -> int:
-    nums = list(range(0,128))
+def find_row_number(ticket_start: str) -> int:
+    nums = list(range(0, 128))
 
     for letter in ticket_start:
         if letter == "F":
-            nums = nums[:len(nums)//2]
+            nums = nums[: len(nums) // 2]
         else:
-            nums = nums[len(nums)//2:]
+            nums = nums[len(nums) // 2 :]
 
     return nums[0] * 8
 
-def find_col_number(ticket_end:str) -> int:
-    nums = list(range(0,8))
+
+def find_col_number(ticket_end: str) -> int:
+    nums = list(range(0, 8))
 
     for letter in ticket_end:
         if letter == "L":
-            nums = nums[:len(nums)//2]
+            nums = nums[: len(nums) // 2]
         else:
-            nums = nums[len(nums)//2:]
+            nums = nums[len(nums) // 2 :]
 
     return nums[0]
+
 
 with open("input5.txt") as file:
     tickets = file.read().splitlines()
@@ -35,7 +37,7 @@ for ticket in tickets:
     seat_list.append(seat_num)
 
 
-possible_seats = set([x+y*8 for x in range(7) for y in range(128)])
+possible_seats = set([x + y * 8 for x in range(7) for y in range(128)])
 
 s = sorted(seat_list)
 

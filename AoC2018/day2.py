@@ -5,10 +5,10 @@ filename = "input2.txt"
 with open(filename) as file:
     data = [line.strip() for line in file.readlines()]
 
-#Part 1
+# Part 1
 
-#for each input, check if it contains doubles or triplets of the same character
-#increment counter variables for each then multiply for the answer
+# for each input, check if it contains doubles or triplets of the same character
+# increment counter variables for each then multiply for the answer
 
 # counts = [Counter(row) for row in data]
 
@@ -22,4 +22,3 @@ with open(filename) as file:
 #         triples += 1
 
 # print(doubles * triples)
-

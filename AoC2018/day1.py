@@ -1,4 +1,5 @@
 import sys
+
 # Problem:   https://adventofcode.com/2018/day/1
 
 filename = "input1.txt"
@@ -18,7 +19,7 @@ counter = 0
 flag = True
 
 while True and flag:
-    
+
     for row in split_data:
         counter += row
         print(counter)

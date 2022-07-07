@@ -1,4 +1,5 @@
 import sys
+
 ##  Part 1  ##
 
 # with open("input9.txt") as file:
@@ -16,7 +17,7 @@ import sys
 #             hash_map[num] = target-num
 #             continue
 #     else:
-        
+
 #         print(f"Sum to {target} not found")
 #         break
 
@@ -28,14 +29,10 @@ with open("input9.txt") as file:
 new_target = 3199139634
 
 for i in range(len(data)):
-    
-    
-    for j in range(i+1, len(data)):
+
+    for j in range(i + 1, len(data)):
         continuous = data[i:j]
         if sum(continuous) == new_target:
             print(f"Span found between {i} and {j}")
             print(min(data[i:j]) + max(data[i:j]))
             sys.exit()
-    
-
-

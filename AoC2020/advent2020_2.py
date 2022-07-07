@@ -36,7 +36,6 @@ number of valid passwords from the list of reqs and pwds
 # print(valid_pwds)
 
 
-
 ##Part 2
 """
 Instead, the numbers refer to indices in the password and 
@@ -58,11 +57,10 @@ with open("input2.txt") as file:
     passwords = file.readlines()
 
 
-passwords = [pwd.split(' ') for pwd in passwords]
+passwords = [pwd.split(" ") for pwd in passwords]
 
 
-
-start_end = [tuple(map(int, line[0].split('-'))) for line in passwords]
+start_end = [tuple(map(int, line[0].split("-"))) for line in passwords]
 
 chars = [line[1].strip(":") for line in passwords]
 
@@ -74,8 +72,8 @@ for s_e, char, pwd, i in zip(start_end, chars, pwds, range(len(pwds))):
     start, end = s_e
     start -= 1
     end -= 1
-    if (int(pwd[start]==char) + int(pwd[end]==char)) == 1:
+    if (int(pwd[start] == char) + int(pwd[end] == char)) == 1:
         valid_pwds += 1
-    
+
 
 print(valid_pwds)

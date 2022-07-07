@@ -6,7 +6,6 @@ with open("input14.txt") as file:
 data = [line.split(" ") for line in data]
 
 
-
 for i, line in enumerate(data):
     if line[0] == "mask" and i == 0:
         mask = line[2]
@@ -26,8 +25,7 @@ for i, line in enumerate(data):
         int32_number = line[2]
         print(mask, location, int32_number)
 
-
-        input_number = '{:032b}'.format(int(int32_number))
+        input_number = "{:032b}".format(int(int32_number))
 
         num = ""
 

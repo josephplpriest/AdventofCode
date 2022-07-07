@@ -3,7 +3,7 @@ with open("input6.txt") as file:
 
 data = data.split("\n\n")
 
-#groups = [set(list(x.replace("\n", ''))) for x in data]
+# groups = [set(list(x.replace("\n", ''))) for x in data]
 
 # total = 0
 
