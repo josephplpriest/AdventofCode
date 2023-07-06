@@ -8,14 +8,16 @@ fn main() {
     let contents: String = fs::read_to_string(file_path)
         .expect("Should have been able to read the file");
 
-    // let mut counter3s: i32 = 0;
-    
-    // let mut counter2s: i32 = 0;
     let parts = contents.split('\n');
 
     let keys = parts.collect::<Vec<&str>>();
 
     let stop = keys.len();
+
+    // let mut counter3s: i32 = 0;
+    
+    // let mut counter2s: i32 = 0;
+
 
     for i in 0..stop {
         for j in (i+1)..stop {
